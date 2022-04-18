@@ -28,15 +28,19 @@ class FeedbackView(APIView):
     serializer_class = FeebackSerializer
     # queryset = Bookmark.objects.all()
     
-    def post(self, request,format=None):
+    def post(self, request, format=None):
 
        
         user_id = self.request.user.id
 
         print('===================')
-        print(self.request.user.id)
+        print(request.data)
         print('====================')
-
-      
+            
+        data = { 'user': user_id, 'subject': request.data['subject'], 'description': request.data['description'] }
+        serializer = FeebackSerializer(data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return HttpResponse('NotFound')
       
         

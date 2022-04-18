@@ -6,4 +6,4 @@ from Feedback import models
 # Register your models here.
 @admin.register(models.Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'description')
+    list_display = ('id', 'user','subject','description')
