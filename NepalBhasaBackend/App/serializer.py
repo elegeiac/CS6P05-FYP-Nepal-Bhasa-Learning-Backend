@@ -34,19 +34,5 @@ class LipiSerializer(serializers.ModelSerializer):
         'lipiEnglish'
         ]
 
-# class QuizSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Quiz
-#         fields = [
-#         'questionID',
-#         'quizLevel',
-#         'quizCategory',
-#         'questionText',
-#         'questionAudio',
-#         'questionImage',
-#         'opt1',
-#         'opt2',
-#         'opt3',
-#         'correctOpt'
-#         ]
+
    

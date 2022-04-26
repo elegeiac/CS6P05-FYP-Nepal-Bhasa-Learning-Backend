@@ -19,6 +19,3 @@ class Lipi(viewsets.ModelViewSet):
     queryset = Lipi.objects.all()
     serializer_class = LipiSerializer
 
-# class Quiz(viewsets.ModelViewSet):
-#     queryset = Quiz.objects.all()
-#     serializer_class = QuizSerializer

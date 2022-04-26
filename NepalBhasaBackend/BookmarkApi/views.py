@@ -53,13 +53,9 @@ class BookmarkPhrase(APIView):
             serializer.save()
             return HttpResponse('NotFound')
         
-
-# class GetBookmarkGet(generics.ListAPIView):
-#     queryset = Bookmark.objects.all()
-#     serializer_class = BookmarkSerializer
     
 class GetBookmarkView(generics.ListAPIView):
-    serializer_class = PhraseSerializer
+    serializer_class = BookmarkSerializer
     def get_queryset(self):
         user_id = self.request.user.id
-        return Phrase.objects.filter(bookmark__user=user_id).all()
+        return models.Bookmark.objects.filter(user=user_id).all()
