@@ -83,14 +83,25 @@ WSGI_APPLICATION = 'NepalBhasaBackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'nepal_bhasa_db',
+#     'USER':'root',
+#     'PASSWORD':'',
+#     'HOST':'localhost',
+#     'PORT':'3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'nepal_bhasa_db',
-    'USER':'root',
-    'PASSWORD':'',
-    'HOST':'localhost',
-    'PORT':'3306',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'd94sul8feah0el',
+    'USER':'tzgwnachdbglnu',
+    'PASSWORD':'b882322163835d33c7ff696114b37d4014efaeaa9c4f0fe29c8587261992bb8c',
+    'HOST':'ec2-100-26-39-41.compute-1.amazonaws.com',
+    'PORT':'5432',
     }
 }
 

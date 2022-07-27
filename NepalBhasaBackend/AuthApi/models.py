@@ -53,7 +53,7 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     objects = CustomAccountManager()
     # This email is used for the username field field while login
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'email' 
     # Required fields that must be filled to submit the form
     REQUIRED_FIELDS = ['user_name']
 
