@@ -1,0 +1,1 @@
+web: gunicorn NepalBhasaBackend.NepalBhasaBackend.wsgi
